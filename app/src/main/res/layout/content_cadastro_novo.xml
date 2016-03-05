@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="br.com.trainning.pdv.CadastroNovoActivity"
+    tools:context="br.com.trainning.pdv_2016.ui.CadastroNovoActivity"
     tools:showIn="@layout/activity_cadastro_novo">
 
     <TextView
@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="R$ - Preço"
+        android:text="Preço"
         android:id="@+id/textViewPreco"
         android:layout_below="@+id/editTextUnidade"
         android:layout_alignParentStart="true" />
@@ -62,31 +62,52 @@
         android:ems="10"
         android:id="@+id/editTextPreco"
         android:layout_below="@+id/textViewPreco"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/editTextUnidade" />
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="|||| - Código de Barras"
-        android:id="@+id/textViewEAN"
+        android:text="Código de Barras"
+        android:id="@+id/textViewCodigo"
         android:layout_below="@+id/editTextPreco"
         android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextEAN"
-        android:layout_below="@+id/textViewEAN"
+        android:id="@+id/editTextCodigo"
+        android:layout_below="@+id/textViewCodigo"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/editTextPreco" />
+        android:layout_alignEnd="@+id/editTextUnidade" />
 
     <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageViewFoto"
+        android:src="@drawable/product"
+        android:layout_below="@+id/editTextCodigo"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        android:id="@+id/imageButtonGaleria"
+        android:paddingLeft="10dp"
+        android:background="@null"
+        android:src="@drawable/ic_insert_photo_black_48dp"
+        android:layout_alignBottom="@+id/imageViewFoto"
+        android:layout_toEndOf="@+id/textViewDescricao" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:paddingLeft="10dp"
+        android:src="@drawable/ic_add_a_photo_black_48dp"
+        android:id="@+id/imageButtonCamera"
+        android:layout_alignBottom="@+id/imageButtonGaleria"
+        android:layout_toEndOf="@+id/imageButtonGaleria" />
+
+
 </RelativeLayout>
